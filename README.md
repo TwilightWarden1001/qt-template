@@ -1,3 +1,7 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![CMake](https://img.shields.io/badge/build-CMake-blue)
+![Qt](https://img.shields.io/badge/framework-Qt6-green)
+
 # Qt Template Project
 
 A ready-to-use C++/Qt6 starter template with **CMake**, **QRC resources**, and **QSS stylesheets**.  
@@ -13,11 +17,11 @@ Clone this repo to quickly bootstrap a new Qt application with **zero setup head
 
 ## Getting Started
 
-### 1. Install QT
+### 1. Install Qt
 
 - Download the [Qt Online Installer](https://www.qt.io/download-dev)
 - Create a free account if you don’t already have one.
-- During installation, make sure to select Qt 6.x and the MinGW compiler.
+- During installation, make sure to select Qt 6.x with the MinGW 64-bit (mingw_64) kit.
 
 ### 2. Install MinGW
 
@@ -41,7 +45,7 @@ On **Windows**
 ./BuildApplication.bat
 ```
 
-On **MacOS/Linx**
+On **macOS/Linux**
 
 ```bash
 ./BuildApplication.sh
@@ -53,7 +57,7 @@ On **MacOS/Linx**
 
 ```bash
 ├── BuildApplication.bat      # Windows build script
-├── BuildApplication.sh       # MacOS/Linux build script
+├── BuildApplication.sh       # macOS/Linux build script
 ├── CMakeLists.txt            # Root CMake config
 ├── resources.qrc             # Resource definitions
 ├── src/app/                  # Application code
@@ -68,15 +72,21 @@ On **MacOS/Linx**
 └── QT_Cookbook.md            # Notes & usage guide
 ```
 
+(BuildApplication.sh is planned for macOS/Linux, not yet implemented)
+
+---
+
 ## Notes
 
-- For deployment on Windows, the batch file automatically calls windeployqt to include all necessary Qt dependencies.
+- On Windows, the batch file automatically calls `windeployqt` to include all required Qt dependencies.
+
+---
 
 ## ToDo
 
-- Make MacOS/Linux Script
-- Add examples to MainWindow.cpp
+- Add macOS/Linux build script.
+- Add examples to MainWindow.cpp.
 
 ## License
 
-Licensed under the MIT License — see [LICENSE](https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide) for details.
+Licensed under the MIT License — see [LICENSE](LICENSE) for details.

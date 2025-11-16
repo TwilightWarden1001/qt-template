@@ -30,7 +30,7 @@ QPushButton *button = new QPushButton("Download", this);
 #### Connecting
 
 ```cpp
-connect(button, &QPushButton::clicked(), this, &MainWindow::download());
+connect(button, &QPushButton::clicked, this, &MainWindow::download);
 ```
 
 #### Useful Functions
@@ -58,7 +58,7 @@ QLabel *label = new QLabel(this);
 #### Connecting
 
 ```cpp
-connect(label, &QLabel::setPicture(), this, &MainWindow::changePicture());
+connect(label, &QLabel::setPicture, this, &MainWindow::changePicture);
 ```
 
 #### Functions
@@ -87,7 +87,7 @@ QLineEdit *lineEdit = new QLineEdit(this);
 #### Connecting
 
 ```cpp
-connect(lineEdit, &QLineEdit::returnPressed(), this, &MainWindow::search());
+connect(lineEdit, &QLineEdit::returnPressed, this, &MainWindow::search);
 ```
 
 #### Functions
@@ -98,6 +98,8 @@ QString text()                          // Returns the line edit contents.
 void clear()                            // Clears the line edit contents.
 void setPlaceholderText(const QString&) // Sets the placeholder text (gray text) for the line edit
 void setEchoMode(QLineEdit::Password)   // Sets the echo mode for the line edit
+void setEnabled(bool)                // Enables or disables the line edit.
+bool isEnabled()                     // Returns true if the line edit is enabled.
 ```
 
 #### Signals
@@ -126,10 +128,6 @@ connect(checkbox, &QCheckBox::setCheckState(Qt::Checked), this, &MainWindow::tog
 ```
 
 #### Functions
-
-```cpp
-
-```
 
 ---
 

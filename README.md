@@ -79,6 +79,8 @@ On **macOS/Linux**
 ## Notes
 
 - On Windows, the batch file automatically calls `windeployqt` to include all required Qt dependencies.
+- On Windows, if you attempt to run `./BuildApplication.bat` and there are spaces in your folders, it will fail and create empty folders
+- To change the name of the Application change the name in `./BuildApplication.bat` and the top level `CMakeLists.txt`
 
 ---
 
@@ -86,6 +88,7 @@ On **macOS/Linux**
 
 - Add macOS/Linux build script.
 - Add examples to MainWindow.cpp.
+- Finish QT_Cookbook.md
 
 ## License
 

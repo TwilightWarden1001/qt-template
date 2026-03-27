@@ -10,10 +10,11 @@ Clone this repo to quickly bootstrap a new Qt application with **zero setup head
 ## Features
 
 - ✅ CMake build system (Windows)
-- ✅ Dark/Light QSS stylesheets (`styles/`)
+- ✅ Dark/Light QSS stylesheet templates (not filled out) (`styles/`)
 - ✅ Centralized QRC resource management (`resources.qrc`)
 - ✅ Example `MainWindow` implementation
-- ✅ Windows build script (`BuildApplication.bat`)
+- ✅ Windows build script (`FullBuild.bat` and `FastBuild.bat`)
+- ✅ Space-Safe: This script supports folder names with spaces. No manual path editing required.
 
 ## Getting Started
 
@@ -53,11 +54,11 @@ On **macOS/Linux**
 
 ---
 
-## Project Structure
+## Current Project Structure
 
 ```bash
-├── BuildApplication.bat      # Windows build script
-├── BuildApplication.sh       # macOS/Linux build script
+├── FullBuild.bat             # Fresh Windows build script
+├── FastBuild.bat             # Fast Windows build script
 ├── CMakeLists.txt            # Root CMake config
 ├── resources.qrc             # Resource definitions
 ├── src/app/                  # Application code
@@ -72,15 +73,14 @@ On **macOS/Linux**
 └── QT_Cookbook.md            # Notes & usage guide
 ```
 
-(BuildApplication.sh is planned for macOS/Linux, not yet implemented)
+(FullBuild.sh and FastBuild.sh are planned for macOS/Linux, not yet implemented)
 
 ---
 
 ## Notes
 
 - On Windows, the batch file automatically calls `windeployqt` to include all required Qt dependencies.
-- On Windows, if you attempt to run `./BuildApplication.bat` and there are spaces in your folders, it will fail and create empty folders
-- To change the name of the Application change the name in `./BuildApplication.bat` and the top level `CMakeLists.txt`
+- To change the name of the Application change the name in `./FullBuild.bat/sh`, `./FastBuild.bat/sh` and the top level `CMakeLists.txt`
 
 ---
 
